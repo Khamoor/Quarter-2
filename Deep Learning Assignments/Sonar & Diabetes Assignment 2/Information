@@ -1,0 +1,24 @@
+load dataset
+shuffle dataset
+Split training (70), Validation (10) and Test (20) %
+Split Inputs and Labels (Output)
+One Hot Coding
+Fit Model without validation (Compare Training and Testing Accuracies)
+Fit Model with Validation (with History)
+Create Graph
+Adjust epoch based on graph
+Check Testing and Training accuracies are matched or not
+(Chapter 3: Listing 3:17, 3:18, 3:20)
+
+df_train = sonar_df.iloc[:144, :59]
+dt_train_label = sonar_df.iloc[:144, 59]
+train_data = df_train.to_numpy()
+train_labels = df_train_label.to_numpy()
+one_hot_train_labels = to_categorical(trian_labels)
+
+Short Cut
+train_data = sonar_df.iloc[:144,:59].values
+from sklearn import preprocessing as pp
+pp.labelEncoder(
+df.sample(frac=1)
+The frac keyword argument specifies the fraction of rows to return in the random sample, so frac=1 means return all rows (in random order)

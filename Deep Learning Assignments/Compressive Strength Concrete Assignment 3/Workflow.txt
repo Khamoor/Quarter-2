@@ -1,0 +1,19 @@
+1) Load Data
+
+2) Check Missing Values ( If Exist ; Fill each record with mean of its feature )
+
+3) Split into 50% Training(Samples,Labels) , 30% Test(Samples,Labels) and 20% Validation Data(Samples,Labels).
+
+4) Model : input Layer (No. of features ), 3 hidden layers including 10,8,6 unit & Output Layer with activation function relu/tanh (check by experiment).
+
+5) Compilation Step (Note : Its a Regression problem , select loss , metrics according to it)
+
+6) Train the Model with Epochs (100) and validate it
+
+7) If the model gets overfit tune your model by changing the units , No. of layers , activation function , epochs , add dropout layer or add 
+
+8) Regularizer according to the need .
+
+9) Evaluation Step
+
+10) Prediction 

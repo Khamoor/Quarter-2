@@ -1,0 +1,30 @@
+1) load data set (pandas)
+1) Label Encoding (pandas)
+2) shufle dataset (pandas)
+3) split training (70) validation (10) and test (20) %
+4) Split  inputs and labels (output)
+5) label one hot coding
+6) fit model without validation (compare training and testing acuracies)
+7) fit model wit validation (with history)
+8) create graph
+9) Introduce k-fold, as data is limited
+10) tune nework accuracy by ephoc numbers, change of optimizer,  
+	bath size, hidden layers, number of nueron, 
+
+(chapter 3: Listing Listing 3.9, 3:11,  3:17, 3:18  3:19, 3:20)
+from tensorflow.keras.utils import to_categorical
+from sklearn import preprocessing as pp
+enc = pp.LabelEncoder()
+sonar_df.iloc[:,60] = enc.fit_transform(sonar_df.iloc[:,60])
+
+df_train=sonar_df.iloc[:144,:60]
+df_train_label = sonar_df.iloc[:144, 60]
+train_data = df_train.to_numpy()
+train_labels = df_train_label.to_numpy()
+one_hot_trrain_labels = to_categorical(train_labels)
+#short cut
+train_data = sonar_df.iloc[:144,:60].values
+df.sample(frac=1)
+
+The frac keyword argument specifies the fraction of rows to return in the random sample, 
+so frac=1 means return all rows (in random order).
